@@ -1,5 +1,7 @@
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
 
+
+
   <PropertyGroup>
     <!--Work around so the conditions work below-->
     <TargetFrameworks></TargetFrameworks>
@@ -28,25 +30,26 @@
 
     <LangVersion>latest</LangVersion>
     <DebugType>portable</DebugType>
-    
-    <!--TODO: Fill these in-->
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/LuckyDucko/NotificationService</PackageProjectUrl>
-    <RepositoryUrl>LINK TO PROJECT</RepositoryUrl>
+    <RepositoryUrl>https://github.com/LuckyDucko/NotificationService</RepositoryUrl>
     <PackageReleaseNotes>--PLUGIN STILL IN ALPHA--</PackageReleaseNotes>
     <PackageTags>xamarin, ios, android, xamarin.forms, plugin, NotificationService</PackageTags>
+
     
     <Title>NotificationService</Title>
     <Summary>Local Notifications for Xamarin iOS and Android. </Summary>
     <Description>NotificationService aims for local notifications to be a quick and easy addition into any project. Still in ALPHA</Description>
     
     
-    <Owners>Tyson Hooker</Owners>
+    <Owners>LuckyDucko</Owners>
     <Authors>Tyson Hooker</Authors>
     <Copyright>Copyright 2020</Copyright>
 
     <!--When built in 2019 will remove extra references on pack-->
     <DisableExtraReferences>true</DisableExtraReferences>
     
+    <ReleaseVersion>0.2</ReleaseVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
@@ -63,12 +66,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="**\*.shared.cs" />
-    <Compile Include="LocalNotification.cs">
-      <SubType></SubType>
-    </Compile>
-    <Compile Include="ScheduledAlarmHandler.cs">
-      <SubType></SubType>
-    </Compile>
+      <None Remove="*~" />
+      <None Remove="*/*~" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
@@ -112,4 +111,7 @@
     <Compile Include="**\*.dotnet.cs" />
   </ItemGroup>
   -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'MonoAndroid90'">
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.3" />
+  </ItemGroup>
 </Project>
