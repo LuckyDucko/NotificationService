@@ -14,8 +14,6 @@
 
 ## Table of Contents
 
-https://www.nuget.org/packages/Plugin.NotificationService
-
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/70a060f27ea14114a6b0ee3ccc9badcd)](https://app.codacy.com/manual/LuckyDucko/NotificationService?utm_source=github.com&utm_medium=referral&utm_content=LuckyDucko/NotificationService&utm_campaign=Badge_Grade_Dashboard)
 [![nuget](https://img.shields.io/nuget/v/Plugin.NotificationService.svg)](https://www.nuget.org/packages/Plugin.NotificationService)
 
@@ -51,7 +49,6 @@ E) Discuss benefits and drawbacks of using Android AlarmManager for Scheduled Al
 
 ### Installation
 
-TBC, link here to nuget.
 Add code examples to setup iOS and Android to a minimum working version
 
 
@@ -82,7 +79,7 @@ My [Github](https://github.com/LuckyDucko),
 or reach me on the [Xamarin Slack](https://xamarinchat.herokuapp.com/),
 or on my [E-mail](tyson@logchecker.com.au)
 
-Project Link: [AwaitablePopups](https://github.com/LuckyDucko/AwaitablePopups)
+Project Link: [NotificationService](https://github.com/LuckyDucko/NotificationService)
 
 
 
