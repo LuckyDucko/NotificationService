@@ -1,88 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
-
-
-
-  <PropertyGroup>
-    <!--Work around so the conditions work below-->
-    <TargetFrameworks></TargetFrameworks>
-    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">netstandard1.0;netstandard2.0;Xamarin.iOS10;MonoAndroid90;uap10.0.16299</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.0;netstandard2.0;Xamarin.iOS10;MonoAndroid90</TargetFrameworks>
-    <!--Feel free to add as many targets as you need below
+	<PropertyGroup>
+		<!--Work around so the conditions work below-->
+		<TargetFrameworks>
+		</TargetFrameworks>
+		<TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">netstandard1.0;netstandard2.0;Xamarin.iOS10;MonoAndroid90;uap10.0.16299</TargetFrameworks>
+		<TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.0;netstandard2.0;Xamarin.iOS10;MonoAndroid90</TargetFrameworks>
+		<!--Feel free to add as many targets as you need below
     netstandard1.0;netstandard2.0;MonoAndroid90;Xamarin.iOS10;uap10.0.16299;Xamarin.TVOS10;Xamarin.WatchOS10;Xamarin.Mac20;Tizen40
     For UWP update the version number with a version number you have installed.
     -->
-    <AssemblyName>Plugin.NotificationService</AssemblyName>
-    <RootNamespace>Plugin.NotificationService</RootNamespace>
-    <PackageId>Plugin.NotificationService</PackageId>
-    
-    <Product>$(AssemblyName) ($(TargetFramework))</Product>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
-    <Version>1.0.0.0</Version>
-    <PackageVersion>0.0.1.0</PackageVersion>
-    <PackOnBuild>true</PackOnBuild>
-    <NeutralLanguage>en</NeutralLanguage>
-    <LangVersion>default</LangVersion>
-    <DefineConstants>$(DefineConstants);</DefineConstants>
-    
-    <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
-    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-
-    <LangVersion>latest</LangVersion>
-    <DebugType>portable</DebugType>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/LuckyDucko/NotificationService</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/LuckyDucko/NotificationService</RepositoryUrl>
-    <PackageReleaseNotes>--PLUGIN STILL IN ALPHA--</PackageReleaseNotes>
-    <PackageTags>xamarin, ios, android, xamarin.forms, plugin, NotificationService</PackageTags>
-
-    
-    <Title>NotificationService</Title>
-    <Summary>Local Notifications for Xamarin iOS and Android. </Summary>
-    <Description>NotificationService aims for local notifications to be a quick and easy addition into any project. Still in ALPHA</Description>
-    
-    
-    <Owners>LuckyDucko</Owners>
-    <Authors>Tyson Hooker</Authors>
-    <Copyright>Copyright 2020</Copyright>
-
-    <!--When built in 2019 will remove extra references on pack-->
-    <DisableExtraReferences>true</DisableExtraReferences>
-    
-    <ReleaseVersion>0.2</ReleaseVersion>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
-    <DebugSymbols>true</DebugSymbols>
-    <GenerateDocumentationFile>false</GenerateDocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)'=='Release' ">
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType></DebugType>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="**\*.shared.cs" />
-      <None Remove="*~" />
-      <None Remove="*/*~" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
-  </ItemGroup>
-
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
-    <Compile Include="**\*.android.cs" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
-    <Compile Include="**\*.apple.cs" />
-  </ItemGroup>
-
-  <!--Additional item groups-->
-  <!--
+		<AssemblyName>Plugin.NotificationService</AssemblyName>
+		<RootNamespace>Plugin.NotificationService</RootNamespace>
+		<PackageId>Plugin.NotificationService</PackageId>
+		<Product>$(AssemblyName) ($(TargetFramework))</Product>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+		<Version>1.0.0.0</Version>
+		<PackageVersion>0.0.2.0</PackageVersion>
+		<PackOnBuild>true</PackOnBuild>
+		<NeutralLanguage>en</NeutralLanguage>
+		<LangVersion>default</LangVersion>
+		<DefineConstants>$(DefineConstants);</DefineConstants>
+		<UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+		<LangVersion>latest</LangVersion>
+		<DebugType>portable</DebugType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/LuckyDucko/NotificationService</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/LuckyDucko/NotificationService</RepositoryUrl>
+		<PackageReleaseNotes>Minor Changes
+Currently, pugin is focused at background notifications. Will add in a method of transferring back and forth when possible</PackageReleaseNotes>
+		<PackageTags>xamarin, ios, android, xamarin.forms, plugin, NotificationService</PackageTags>
+		<Title>NotificationService</Title>
+		<Summary>Local Notifications for Xamarin iOS and Android. </Summary>
+		<Description>NotificationService aims for local notifications to be a quick and easy addition into any project.</Description>
+		<Owners>LuckyDucko</Owners>
+		<Authors>Tyson Hooker</Authors>
+		<Copyright>Copyright 2020</Copyright>
+		<!--When built in 2019 will remove extra references on pack-->
+		<DisableExtraReferences>true</DisableExtraReferences>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
+		<DebugSymbols>true</DebugSymbols>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)'=='Release' ">
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+	<PropertyGroup>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DebugType>
+		</DebugType>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Include="**\*.shared.cs" />
+		<None Remove="*~" />
+		<None Remove="*/*~" />
+	</ItemGroup>
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
+	</ItemGroup>
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+		<Compile Include="**\*.android.cs" />
+	</ItemGroup>
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+		<Compile Include="**\*.apple.cs" />
+	</ItemGroup>
+	<!--Additional item groups-->
+	<!--
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.TVOS')) ">
     <Compile Include="**\*.tvos.cs" />
   </ItemGroup>
@@ -111,7 +100,7 @@
     <Compile Include="**\*.dotnet.cs" />
   </ItemGroup>
   -->
-  <ItemGroup Condition="'$(TargetFramework)' == 'MonoAndroid90'">
-    <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.3" />
-  </ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'MonoAndroid90'">
+		<PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.3" />
+	</ItemGroup>
 </Project>
