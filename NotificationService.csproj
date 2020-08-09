@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
 	<PropertyGroup>
 		<!--Work around so the conditions work below-->
@@ -40,6 +40,7 @@ Currently, pugin is focused at background notifications. Will add in a method of
 		<Copyright>Copyright 2020</Copyright>
 		<!--When built in 2019 will remove extra references on pack-->
 		<DisableExtraReferences>true</DisableExtraReferences>
+		<ReleaseVersion>0.2</ReleaseVersion>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
 		<DebugSymbols>true</DebugSymbols>
