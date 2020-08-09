@@ -36,18 +36,8 @@ Simply provide a time and let the plugin work out the rest under the hood.
 
 <!-- GETTING STARTED -->
 ## Getting Started
-TBC
-WIll put notes here for the following
-
-A) Allowing iOS to show notifications to User while app is still open.
-B) Inform users concerning android notification channels
-C) inform users concerning some "boiler plate" with android and sounds and whatnot.
-D) Discuss Android Doze.
-E) Discuss benefits and drawbacks of using Android AlarmManager for Scheduled Alarms (Cuts through android doze, 1 every 15 minutes though)
 
 ### Installation
-
-Add code examples to setup iOS and Android to a minimum working version
 
 
 **Android Setup**
