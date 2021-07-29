@@ -1,21 +1,22 @@
+# Archived
 
-<br />
-<p align="center">
-  <h1 align="center">NotificationService</h3>
-  <p align="center">
-  Quick and easy Notifications for Xamarin Forms iOS/Android
-    <br />
-  </p>
-</p>
+Please use https://github.com/thudugala/Plugin.LocalNotification for Notifications in Xamarin
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 
 
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/70a060f27ea14114a6b0ee3ccc9badcd)](https://app.codacy.com/manual/LuckyDucko/NotificationService?utm_source=github.com&utm_medium=referral&utm_content=LuckyDucko/NotificationService&utm_campaign=Badge_Grade_Dashboard)
-[![nuget](https://img.shields.io/nuget/v/Plugin.NotificationService.svg)](https://www.nuget.org/packages/Plugin.NotificationService)
 
 * [Getting Started](#getting-started)
   * [Installation](#installation)
